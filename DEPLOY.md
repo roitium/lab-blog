@@ -108,14 +108,9 @@ draft: false
 
 ## 6. 上线前的清理
 
-模板自带的示例文章还在，会一起出现在首页。确认不需要后删除：
+模板自带的示例文章已经删除，`src/content/posts/` 里只剩自己的文章。还需要把 `src/content/pages/about.md` 从模板默认文案改成自己的介绍。
 
-```bash
-rm -rf src/content/posts/*
-# 保留空目录，之后写自己的文章
-```
-
-同时把 `src/content/pages/about.md` 改成你自己的介绍。
+写作规范和这套模板的完整功能，见站内文章《AstroPaper 模板速查手册》（`src/content/posts/astropaper-guide.md`）。
 
 ## 7. 可选增强
 
