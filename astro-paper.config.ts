@@ -14,6 +14,11 @@ export default defineAstroPaperConfig({
     dir: "ltr",
     // googleVerification: "your-google-site-verification-value",
   },
+  home: {
+    greeting: "氦！",
+    intro:
+      "该博客仅用于存放和展示 Roitium 在 3G 实验室产出的博文、周报与感想",
+  },
   posts: {
     perPage: 4,
     perIndex: 4,

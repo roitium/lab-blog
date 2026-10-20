@@ -20,6 +20,10 @@ const config: ResolvedAstroPaperConfig = {
     googleVerification:
       userConfig.site.googleVerification || PUBLIC_GOOGLE_SITE_VERIFICATION,
   },
+  home: {
+    greeting: userConfig.home?.greeting ?? userConfig.site.title,
+    intro: userConfig.home?.intro ?? userConfig.site.description,
+  },
   posts: {
     perPage: userConfig.posts?.perPage ?? 4,
     perIndex: userConfig.posts?.perIndex ?? 4,

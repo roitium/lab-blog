@@ -92,8 +92,16 @@ interface ShareLink {
   linkTitle?: string;
 }
 
+interface HomeConfig {
+  /** Greeting shown as the homepage hero heading */
+  greeting: string;
+  /** Short intro paragraph shown under the greeting */
+  intro: string;
+}
+
 interface AstroPaperConfig {
   site: SiteConfig;
+  home?: HomeConfig;
   posts?: PostsConfig;
   features?: FeaturesConfig;
   /** Social profile links shown in header/footer */
@@ -119,6 +127,7 @@ type ResolvedSiteConfig = Required<
 
 export interface ResolvedAstroPaperConfig {
   site: ResolvedSiteConfig;
+  home: HomeConfig;
   posts: Required<PostsConfig>;
   features: Required<FeaturesConfig>;
   socials: SocialLink[];
