@@ -23,7 +23,8 @@ export interface UIStrings {
   pagination: {
     prev: string;
     next: string;
-    page: string;
+    /** Template with a `{{page}}` placeholder, e.g. "Page {{page}}" */
+    pageNumber: string;
   };
   home: {
     socialLinks: string;
