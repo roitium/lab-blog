@@ -1,0 +1,47 @@
+import { defineAstroPaperConfig } from "./src/types/config";
+
+export default defineAstroPaperConfig({
+  site: {
+    // TODO: 换成你的正式域名（必须带协议和结尾斜杠），例如 "https://blog.example.com/"
+    url: "https://lab-blog.example.com/",
+    title: "Lab Blog",
+    description: "Notes, experiments, and things I learn along the way.",
+    author: "Your Name",
+    profile: "https://github.com/your-username",
+    ogImage: "default-og.jpg",
+    lang: "en",
+    timezone: "Asia/Shanghai",
+    dir: "ltr",
+    // googleVerification: "your-google-site-verification-value",
+  },
+  posts: {
+    perPage: 4,
+    perIndex: 4,
+    scheduledPostMargin: 15 * 60 * 1000,
+  },
+  features: {
+    lightAndDarkMode: true,
+    dynamicOgImage: true,
+    showArchives: true,
+    showBackButton: true,
+    editPost: {
+      // TODO: 换成你自己的仓库地址，或在不需要 “编辑此页” 时改为 { enabled: false }
+      enabled: true,
+      url: "https://github.com/your-username/lab-blog/edit/main/",
+    },
+    search: "pagefind",
+  },
+  socials: [
+    // 图标文件名来自 src/assets/icons/socials/，可用：github / x / linkedin / mail 等
+    { name: "github", url: "https://github.com/your-username" },
+    { name: "mail", url: "mailto:you@example.com" },
+  ],
+  shareLinks: [
+    { name: "whatsapp", url: "https://wa.me/?text=" },
+    { name: "facebook", url: "https://www.facebook.com/sharer.php?u=" },
+    { name: "x", url: "https://x.com/intent/post?url=" },
+    { name: "telegram", url: "https://t.me/share/url?url=" },
+    { name: "pinterest", url: "https://pinterest.com/pin/create/button/?url=" },
+    { name: "mail", url: "mailto:?subject=See%20this%20post&body=" },
+  ],
+});
