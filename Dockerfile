@@ -2,10 +2,9 @@
 FROM node:lts AS base
 WORKDIR /app
 
-# Install pnpm
-RUN corepack enable && corepack prepare pnpm@latest --activate
-
+# Install the pnpm version pinned in package.json#packageManager
 COPY package.json pnpm-lock.yaml ./
+RUN npm install -g "$(node -p "require('./package.json').packageManager")" && pnpm --version
 RUN pnpm install --frozen-lockfile
 
 COPY . .

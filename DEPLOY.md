@@ -7,6 +7,12 @@
 - 本地模拟 Cloudflare 环境：`pnpm cf:preview`（= `wrangler dev`）
 - 一键构建 + 部署：`pnpm deploy`（= `pnpm build && wrangler deploy`）
 
+## 版本固定
+
+pnpm 版本固定在 `package.json` 的 `packageManager` 字段（当前 `pnpm@11.25.0`），`engines.pnpm` 约束 `>=11.25.0 <12`。CI（`pnpm/action-setup`）和 `Dockerfile` 都直接读取这个字段，不再各自硬编码版本；升级时只需改这一处，然后跑一次 `pnpm install` 更新 lockfile。
+
+Node 版本要求仍然是 `>=22.12.0`（见 `engines.node`，Cloudflare 上用 `NODE_VERSION=24`）。
+
 ## 0. 先改这几处占位信息
 
 `astro-paper.config.ts`：
