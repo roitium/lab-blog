@@ -3,13 +3,13 @@ import { defineAstroPaperConfig } from "./src/types/config";
 export default defineAstroPaperConfig({
   site: {
     // TODO: 换成你的正式域名（必须带协议和结尾斜杠），例如 "https://blog.example.com/"
-    url: "https://lab-blog.example.com/",
-    title: "Lab Blog",
-    description: "Notes, experiments, and things I learn along the way.",
-    author: "Your Name",
-    profile: "https://github.com/your-username",
+    url: "https://lab-blog.roitium.com/",
+    title: "Roitium 3G Lab Blog",
+    description: "只是单纯存放在实验室产出的博文、感想、周报等。",
+    author: "Roitium",
+    profile: "https://github.com/roitium",
     ogImage: "default-og.jpg",
-    lang: "en",
+    lang: "zh-CN",
     timezone: "Asia/Shanghai",
     dir: "ltr",
     // googleVerification: "your-google-site-verification-value",
@@ -27,14 +27,14 @@ export default defineAstroPaperConfig({
     editPost: {
       // TODO: 换成你自己的仓库地址，或在不需要 “编辑此页” 时改为 { enabled: false }
       enabled: true,
-      url: "https://github.com/your-username/lab-blog/edit/main/",
+      url: "https://github.com/roitium/lab-blog/edit/main/",
     },
     search: "pagefind",
   },
   socials: [
     // 图标文件名来自 src/assets/icons/socials/，可用：github / x / linkedin / mail 等
-    { name: "github", url: "https://github.com/your-username" },
-    { name: "mail", url: "mailto:you@example.com" },
+    { name: "github", url: "https://github.com/roitium" },
+    { name: "mail", url: "mailto:me@roitium.com" },
   ],
   shareLinks: [
     { name: "whatsapp", url: "https://wa.me/?text=" },
