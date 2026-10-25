@@ -11,6 +11,8 @@ import { unified } from "@astrojs/markdown-remark";
 import remarkToc from "remark-toc";
 import remarkCollapse from "remark-collapse";
 import rehypeCallouts from "rehype-callouts";
+import remarkMath from "remark-math";
+import rehypeKatex from "rehype-katex";
 import {
   transformerNotationDiff,
   transformerNotationHighlight,
@@ -38,13 +40,14 @@ export default defineConfig({
   markdown: {
     processor: unified({
       remarkPlugins: [
+        remarkMath,
         [remarkToc, { heading: "table of contents|目录" }],
         [
           remarkCollapse,
           { test: /^(Table of contents|目录)$/, summary: "展开目录" },
         ],
       ],
-      rehypePlugins: [rehypeCallouts],
+      rehypePlugins: [rehypeCallouts, rehypeKatex],
     }),
     shikiConfig: {
       themes: { light: "min-light", dark: "night-owl" },

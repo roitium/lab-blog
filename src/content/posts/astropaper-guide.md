@@ -266,15 +266,25 @@ import ResponsiveTable from "@/components/ResponsiveTable.astro";
 
 `variant` 可选 `minimal`（无边框）、`striped`（斑马纹）、`striped-minimal`（斑马纹 + 无边框）。
 
-### 数学公式（默认未启用）
+### 数学公式
 
-需要自己加插件：
+Markdown 和 MDX 均支持 LaTeX 公式，由 KaTeX 在构建时渲染，无需客户端脚本。
 
-```bash
-pnpm add remark-math rehype-katex katex
+行内公式用一对 `$` 包裹，例如 `$E = mc^2$`：$E = mc^2$。
+
+独立公式用两行 `$$` 包裹：
+
+```latex
+$$
+\int_0^1 x^2\,dx = \frac{1}{3}
+$$
 ```
 
-然后在 `astro.config.ts` 的 `remarkPlugins` 里加 `remarkMath`，`rehypePlugins` 里加 `rehypeKatex`，并在 `Layout.astro` 里引入 `katex/dist/katex.min.css`（或在页面里用 CDN 链接）。
+$$
+\int_0^1 x^2\,dx = \frac{1}{3}
+$$
+
+长公式可横向滚动。普通文本中需要显示美元符号时，写成 `\$`。
 
 ## 页面与路由
 
