@@ -7,7 +7,10 @@
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
   --color-border: var(--border);
-  --font-app: var(--font-google-sans-code);
+  --font-app: "LXGW WenKai", monospace;
+  /* 代码块、行内代码使用 Monaspace */
+  --font-mono:
+    var(--font-monaspace-neon), ui-monospace, SFMono-Regular, Menlo, monospace;
 }
 
 /* Light theme values */

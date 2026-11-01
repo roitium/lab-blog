@@ -20,6 +20,9 @@ importers:
       '@astrojs/sitemap':
         specifier: ^3.7.3
         version: 3.7.3
+      '@chinese-fonts/lxgwwenkai':
+        specifier: 3.0.0
+        version: 3.0.0
       '@tailwindcss/vite':
         specifier: ^4.3.2
         version: 4.3.2(vite@8.1.0(@types/node@24.12.2)(esbuild@0.28.1)(jiti@2.7.0)(yaml@2.8.3))
@@ -301,6 +304,9 @@ packages:
   '@capsizecss/unpack@4.0.0':
     resolution: {integrity: sha512-VERIM64vtTP1C4mxQ5thVT9fK0apjPFobqybMtA1UdUujWka24ERHbRHFGmpbbhp73MhV+KSsHQH9C6uOTdEQA==}
     engines: {node: '>=18'}
+
+  '@chinese-fonts/lxgwwenkai@3.0.0':
+    resolution: {integrity: sha512-mpgFYE8ro0TcbJdxmnvkPNKnsF3VqzJVRfDbRvDx83JHaLEVAht9pL8SqbqbduoPHXX+2ekgC+45sf74ljLe7g==}
 
   '@clack/core@1.3.1':
     resolution: {integrity: sha512-fT1qHVGAag4IEkrupZ6lRRbNCs1vS9P01KB/sG8zKgvUztbYtFBtQpjSITNwooDZ83tpsPzP0mRNs1/KVszCRA==}
@@ -4011,6 +4017,8 @@ snapshots:
   '@capsizecss/unpack@4.0.0':
     dependencies:
       fontkitten: 1.0.3
+
+  '@chinese-fonts/lxgwwenkai@3.0.0': {}
 
   '@clack/core@1.3.1':
     dependencies:

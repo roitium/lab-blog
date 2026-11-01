@@ -66,13 +66,16 @@ export default defineConfig({
   },
   fonts: [
     {
-      name: "Google Sans Code",
-      cssVariable: "--font-google-sans-code",
-      provider: fontProviders.google(),
-      fallbacks: ["monospace"],
+      name: "Monaspace Neon",
+      cssVariable: "--font-monaspace-neon",
+      provider: fontProviders.fontsource(),
+      // 不使用自带 fallback：中文由 LXGW WenKai 接管，字体栈在 theme.css 中定义
+      fallbacks: [],
+      // Monaspace 只用于代码，正常体足够
       weights: [300, 400, 500, 600, 700],
-      styles: ["normal", "italic"],
-      formats: ["woff", "ttf"],
+      styles: ["normal"],
+      // woff2 给浏览器，woff 给 satori（OG 图不接受 woff2）
+      formats: ["woff2", "woff"],
     },
   ],
   env: {

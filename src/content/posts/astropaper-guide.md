@@ -324,13 +324,19 @@ $$
 
 ### 字体
 
-字体在 `astro.config.ts` 的 `fonts` 数组里声明（Astro Fonts API，构建时下载并自托管），当前用的是 Google Sans Code，并映射为 `--font-app`：
+站点字体在 `astro.config.ts` 的 `fonts` 数组里声明（Astro Fonts API，构建时下载并自托管），CSS 变量在 `src/styles/theme.css` 里组合：
+
+- `LXGW WenKai`（霞鹜文楷）：正文（中英文）、标题。通过 `@chinese-fonts/lxgwwenkai` 引入，按 `unicode-range` 拆成 300 多个 woff2 分片，浏览器只下载页面实际用到的字形。标题和加粗额外使用 Medium（`LXGW WenKai Medium`），避免合成粗体。
+- `Monaspace Neon`（`--font-monaspace-neon`）：只用于代码块和行内代码（`--font-mono`）。
 
 ```css
---font-app: var(--font-google-sans-code);
+--font-app: "LXGW WenKai", monospace;
+--font-mono: var(--font-monaspace-neon), ui-monospace, monospace;
 ```
 
-换字体：在 `fonts` 数组里加一项（`name`、`cssVariable`、`provider`、`weights`…），再把 `theme.css` 里的 `--font-app` 指向新的变量。
+OG 图由 satori 在构建时生成，统一使用文楷 WOFF（satori 不支持 woff2）。字体首次下载后会缓存在 `node_modules/.cache/og-fonts/`，相关逻辑在 `src/utils/loadOgFonts.ts`。
+
+换字体：在 `fonts` 数组里改 `name` / `provider` / `weights`，再调整 `theme.css` 里的 `--font-app` / `--font-mono`。
 
 ### 明暗模式与过渡
 
