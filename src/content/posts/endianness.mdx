@@ -11,6 +11,7 @@ description: "从 0x12345678 的内存布局讲清大端序与小端序"
 ---
 
 import endianness from "@/assets/images/endianness.svg";
+import EndiannessDemo from "@/components/interactive/EndiannessDemo.svelte";
 
 ## 目录
 
@@ -41,6 +42,10 @@ import endianness from "@/assets/images/endianness.svg";
 - **小端序（little-endian）**：最低有效字节 `0x78` 放在最低地址 `0x1000`，内存里读出来是 `78 56 34 12`，和书写顺序相反。
 
 所以「大端 / 小端」说的是**字节**的排列，不是位的排列；`0x12345678` 这个数值本身没有变，变的只是它在内存里的落地方式。
+
+下面可以改数值、切换字节序，看看 4 个字节怎么落进内存：
+
+<EndiannessDemo client:visible initial="big" />
 
 ## 为什么会有两种字节序
 

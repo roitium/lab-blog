@@ -21,6 +21,8 @@ import {
 import { transformerFileName } from "./src/utils/transformers/fileName";
 import config from "./astro-paper.config";
 
+import svelte from "@astrojs/svelte";
+
 export default defineConfig({
   site: config.site.url,
   integrations: [
@@ -29,6 +31,7 @@ export default defineConfig({
       filter: page =>
         config.features?.showArchives !== false || !page.endsWith("/archives/"),
     }),
+    svelte(),
   ],
   i18n: {
     locales: ["zh-CN"],
