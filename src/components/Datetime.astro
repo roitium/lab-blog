@@ -42,7 +42,7 @@ const date = datetime.format(dateFormat);
 ---
 
 <div
-  class:list={["text-muted-foreground flex items-center gap-x-2", className]}
+  class:list={["flex items-center gap-x-2 text-muted-foreground", className]}
 >
   <IconCalendar
     class:list={[
@@ -50,13 +50,11 @@ const date = datetime.format(dateFormat);
       { "scale-90": size === "sm" },
     ]}
   />
-  {
-    isModified && (
-      <span class:list={["text-sm", { "sm:text-base": size === "lg" }]}>
-        {t.post.updatedAt}:
-      </span>
-    )
-  }
+  {isModified && (
+    <span class:list={["text-sm", { "sm:text-base": size === "lg" }]}>
+      {t.post.updatedAt}:
+    </span>
+  )}
   <time
     class:list={["text-sm", { "sm:text-base": size === "lg" }]}
     datetime={datetime.toISOString()}

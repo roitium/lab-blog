@@ -24,7 +24,7 @@ description: "这个博客用到的 AstroPaper v6 特性、配置项、写作语
 | 代码高亮  | Shiki（`min-light` / `night-owl` 双主题）      |
 | 搜索      | Pagefind（构建时生成静态索引，无后端）         |
 | OG 图片   | Satori + Sharp + Astro Fonts（构建时生成 PNG） |
-| 类型/规范 | TypeScript、ESLint、Prettier                   |
+| 类型/规范 | TypeScript、ESLint、oxfmt                      |
 | 部署      | Cloudflare Workers 静态资源（Wrangler）        |
 | 包管理    | pnpm 11.25.0（固定在 `packageManager`）        |
 
@@ -37,7 +37,7 @@ description: "这个博客用到的 AstroPaper v6 特性、配置项、写作语
 | `pnpm preview`    | 预览 `dist` 构建结果                                        |
 | `pnpm sync`       | 生成 Astro 类型（改了 content config 后跑一下）             |
 | `pnpm lint`       | ESLint                                                      |
-| `pnpm format`     | Prettier 格式化（`format:check` 只检查）                    |
+| `pnpm format`     | oxfmt 格式化（`format:check` 只检查）                       |
 | `pnpm deploy`     | `pnpm build` + `wrangler deploy`，一条命令发到 Cloudflare   |
 | `pnpm cf:preview` | `wrangler dev`，用 Workers 运行时本地预览静态资源           |
 

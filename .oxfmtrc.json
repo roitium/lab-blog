@@ -1,0 +1,40 @@
+{
+  "$schema": "./node_modules/oxfmt/configuration_schema.json",
+  "arrowParens": "avoid",
+  "semi": true,
+  "tabWidth": 2,
+  "printWidth": 80,
+  "singleQuote": false,
+  "jsxSingleQuote": false,
+  "trailingComma": "es5",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "sortPackageJson": false,
+  "sortTailwindcss": {
+    "stylesheet": "src/styles/global.css"
+  },
+  "svelte": {},
+  "astro": {},
+  "associations": [
+    {
+      "files": [
+        "*.astro"
+      ],
+      "language": "astro"
+    }
+  ],
+  "ignorePatterns": [
+    "/*",
+    "!/src",
+    "!/public",
+    "!/.github",
+    "!tsconfig.json",
+    "!astro.config.ts",
+    "!package.json",
+    "!.oxfmtrc.json",
+    "!eslint.config.js",
+    "!README.md",
+    "!.vscode",
+    "*.mdx"
+  ]
+}

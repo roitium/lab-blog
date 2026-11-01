@@ -90,7 +90,7 @@ All blog posts are stored in the `src/content/posts/` directory. You can organis
 **UI/UX** - [Figma Design File](https://www.figma.com/community/file/1356898632249991861)  
 **Static Search** - [Pagefind](https://pagefind.app/)  
 **Icons** - [Tablers](https://tabler-icons.io/)  
-**Code Formatting** - [Prettier](https://prettier.io/)  
+**Code Formatting** - [oxfmt](https://oxc.rs/docs/guide/usage/formatter)  
 **Deployment** - [Cloudflare Pages](https://pages.cloudflare.com/)  
 **Linting** - [ESLint](https://eslint.org)  
 **Dynamic OG images** - [Satori](https://github.com/vercel/satori) + [Sharp](https://sharp.pixelplumbing.com/) + [Astro Fonts](https://docs.astro.build/en/guides/fonts/)

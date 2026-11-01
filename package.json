@@ -13,8 +13,8 @@
     "preview": "astro preview",
     "sync": "astro sync",
     "astro": "astro",
-    "format:check": "prettier --check .",
-    "format": "prettier --write .",
+    "format:check": "oxfmt --check",
+    "format": "oxfmt",
     "lint": "eslint .",
     "deploy": "pnpm build && wrangler deploy",
     "cf:preview": "wrangler dev"
@@ -44,6 +44,7 @@
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.9",
+    "@astrojs/compiler-rs": "^0.5.2",
     "@pagefind/default-ui": "^1.5.2",
     "@shikijs/transformers": "^4.3.0",
     "@tailwindcss/typography": "^0.5.20",
@@ -51,11 +52,8 @@
     "@typescript-eslint/parser": "^8.62.0",
     "eslint": "^10.6.0",
     "eslint-plugin-astro": "^2.1.1",
+    "oxfmt": "^0.75.0",
     "pagefind": "^1.5.2",
-    "prettier": "3.9.3",
-    "prettier-plugin-astro": "0.14.1",
-    "prettier-plugin-svelte": "^4.1.1",
-    "prettier-plugin-tailwindcss": "^0.8.0",
     "typescript": "^6.0.3",
     "wrangler": "^4.151.2"
   }
